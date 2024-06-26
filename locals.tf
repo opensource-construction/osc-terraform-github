@@ -42,5 +42,20 @@ locals {
       has_issues = true
       teams      = { "devops" : "maintain" }
     }
+
+    "website" = {
+      description = "os.c cloudflare dns automations"
+      name        = "website"
+      owner       = var.owner
+
+      gitignore_template   = "Node"
+      topics               = ["opensource", "nextjs", "react"]
+      vulnerability_alerts = true
+
+      visibility      = "public"
+      has_issues      = true
+      has_discussions = true
+      teams           = { "web" : "maintain" }
+    }
   }
 }

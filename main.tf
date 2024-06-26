@@ -11,6 +11,7 @@ module "repository" {
   topics               = each.value.topics
   visibility           = each.value.visibility
   has_issues           = each.value.has_issues
+  has_discussions      = try(each.value.has_discussions, false)
   teams                = each.value.teams
   vulnerability_alerts = each.value.vulnerability_alerts
 }
