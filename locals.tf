@@ -29,13 +29,13 @@ locals {
       teams      = { "devops" : "maintain" }
     }
 
-    "osc-terraform-aws-emails" = {
-      description = "os.c aws automations"
-      name        = "osc-terraform-aws-emails"
+    "osc-terraform-cloudflare-dns" = {
+      description = "os.c cloudflare dns automations"
+      name        = "osc-terraform-cloudflare-dns"
       owner       = var.owner
 
       gitignore_template   = "Terraform"
-      topics               = ["terraform", "aws"]
+      topics               = ["terraform", "cloudflare"]
       vulnerability_alerts = true
 
       visibility = "public"
