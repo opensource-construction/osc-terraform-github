@@ -44,18 +44,26 @@ locals {
     }
 
     "website" = {
-      description = "os.c cloudflare dns automations"
+      description = "os.c website, content and design components"
       name        = "website"
       owner       = var.owner
 
       gitignore_template   = "Node"
-      topics               = ["opensource", "nextjs", "react"]
+      topics               = ["opensource", "nextjs", "react", "storybook"]
       vulnerability_alerts = true
 
       visibility      = "public"
       has_issues      = true
       has_discussions = true
-      teams           = { "web" : "maintain" }
+
+      license_template = "mit"
+      teams            = { "web" : "maintain" }
+      homepage_url     = "https://opensource.construction"
+
+      enable_pages = true
+      pages_branch = "main"
+      pages_cname  = "design.opensource.construction"
+      pages_path   = "/"
     }
   }
 }
