@@ -71,7 +71,6 @@ locals {
       name        = "answer"
       owner       = var.owner
 
-      gitignore_template   = "None"
       topics               = ["opensource", "apache-answer", "docker"]
       vulnerability_alerts = true
 
