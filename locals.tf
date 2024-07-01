@@ -65,5 +65,23 @@ locals {
       pages_cname  = "design.opensource.construction"
       pages_path   = "/"
     }
+
+    "answer" = {
+      description = "apache answer for os.c"
+      name        = "answer"
+      owner       = var.owner
+
+      gitignore_template   = "None"
+      topics               = ["opensource", "apache-answer", "docker"]
+      vulnerability_alerts = true
+
+      visibility      = "public"
+      has_issues      = true
+      has_discussions = true
+
+      license_template = "apache-2.0"
+      teams            = { "web" : "maintain" }
+      homepage_url     = "https://answer.opensource.construction"
+    }
   }
 }
