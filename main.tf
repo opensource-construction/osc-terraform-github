@@ -5,7 +5,7 @@ module "repository" {
   version = "0.11.0"
 
   description          = each.value.description
-  gitignore_template   = each.value.gitignore_template
+  gitignore_template   = try(each.value.gitignore_template, null)
   name                 = each.value.name
   owner                = var.owner
   topics               = each.value.topics
