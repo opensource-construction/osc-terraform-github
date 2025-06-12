@@ -27,6 +27,8 @@ locals {
       visibility = "public"
       has_issues = true
       teams      = { "devops" : "maintain" }
+
+      required_approving_review_count = 1
     }
 
     "osc-terraform-cloudflare-dns" = {
