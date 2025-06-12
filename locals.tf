@@ -27,6 +27,8 @@ locals {
       visibility = "public"
       has_issues = true
       teams      = { "devops" : "maintain" }
+
+      required_status_checks_contexts = ["Terraform Cloud/opensource-construction/repo-id-MRShmMev8XSyTS2P"]
     }
 
     "osc-terraform-cloudflare-dns" = {
