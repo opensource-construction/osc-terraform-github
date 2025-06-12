@@ -97,8 +97,7 @@ locals {
       has_discussions = true
       has_projects    = true
 
-      license_template = "mit"
-      teams            = { "web" : "push", "directory-moderators" : "triage" }
+      teams = { "web" : "push", "directory-moderators" : "triage" }
 
       allow_auto_merge = true
     }
