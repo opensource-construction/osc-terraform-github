@@ -27,6 +27,8 @@ locals {
       visibility = "public"
       has_issues = true
       teams      = { "devops" : "maintain" }
+
+      required_status_checks_contexts = ["Terraform Cloud/opensource-construction/repo-id-MRShmMev8XSyTS2P"]
     }
 
     "osc-terraform-cloudflare-dns" = {
@@ -95,16 +97,11 @@ locals {
       visibility      = "public"
       has_issues      = true
       has_discussions = true
-      has_projects    = true
+      has_projects    = false
 
       teams = { "web" : "push", "directory-moderators" : "triage" }
 
       allow_auto_merge = true
     }
   }
-}
-
-import {
-  to = module.repository["osc-directory"].github_repository.self
-  id = "osc-directory"
 }
