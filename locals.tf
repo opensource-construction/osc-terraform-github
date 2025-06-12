@@ -28,7 +28,9 @@ locals {
       has_issues = true
       teams      = { "devops" : "maintain" }
 
+      has_branch_protection           = true
       required_approving_review_count = 1
+      required_status_checks_contexts = ["Terraform Cloud"]
     }
 
     "osc-terraform-cloudflare-dns" = {
