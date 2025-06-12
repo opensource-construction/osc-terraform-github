@@ -97,7 +97,7 @@ locals {
       visibility      = "public"
       has_issues      = true
       has_discussions = true
-      has_projects    = true
+      has_projects    = false
 
       teams = { "web" : "push", "directory-moderators" : "triage" }
 
