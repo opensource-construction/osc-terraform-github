@@ -82,5 +82,29 @@ locals {
       teams            = { "web" : "maintain" }
       homepage_url     = "https://answer.opensource.construction"
     }
+
+    "osc-directory" = {
+      description = "The AEC Open Source Directory - a curated directory of open source projects for the Architecture, Engineering, and Construction (AEC) industry."
+
+      name  = "osc-directory"
+      owner = var.owner
+
+      topics               = ["opensource", "construction", "directory", "liberty", "aec"]
+      vulnerability_alerts = true
+
+      visibility      = "public"
+      has_issues      = true
+      has_discussions = true
+      has_projects    = true
+
+      teams = { "web" : "push", "directory-moderators" : "triage" }
+
+      allow_auto_merge = true
+    }
   }
+}
+
+import {
+  to = module.repository["osc-directory"].github_repository.self
+  id = "osc-directory"
 }
