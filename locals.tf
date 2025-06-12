@@ -101,3 +101,8 @@ locals {
     }
   }
 }
+
+import {
+  to = module.repository["osc-directory"].github_repository.self
+  id = "osc-directory"
+}
