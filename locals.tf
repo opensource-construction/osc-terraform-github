@@ -16,12 +16,12 @@ locals {
     }
 
     "osc-terraform-github" = {
-      description = "os.c github automations"
+      description = "os.c github terraform automations"
       name        = "osc-terraform-github"
       owner       = var.owner
 
       gitignore_template   = "Terraform"
-      topics               = ["terraform", "github"]
+      topics               = ["iac", "terraform", "github"]
       vulnerability_alerts = true
 
       visibility = "public"
@@ -29,6 +29,19 @@ locals {
       teams      = { "devops" : "maintain" }
 
       required_status_checks_contexts = ["Terraform Cloud/opensource-construction/repo-id-MRShmMev8XSyTS2P"]
+    }
+
+    "osc-pulumi-github" = {
+      description = "os.c github pulumi automations"
+      name        = "osc-pulumi-github"
+      owner       = var.owner
+
+      topics               = ["iac", "pulumi", "github"]
+      vulnerability_alerts = true
+
+      visibility = "private"
+      has_issues = true
+      teams      = { "devops" : "maintain" }
     }
 
     "osc-terraform-cloudflare-dns" = {
